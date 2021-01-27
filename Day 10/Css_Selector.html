@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>You session</title>
+        <style type="text/css">
+        .red-band{
+            background-color: red;
+            width: 750px;
+            height: 50px;
+            border-radius: 5px;
+            margin: 15px auto;
+        }
+        .second-box{
+            width: 750px;
+            height: 500px ;
+            margin: 15px auto;
+        }
+        .light-green-band{
+            background-color: greenyellow;
+            width: 240px;
+            height: 500px ;
+            border-radius: 5px;
+            margin: 15px auto;
+            float: left;
+            
+        }
+        .dark-green-band{
+            background-color: rgb(21, 105, 4);
+            width: 440px;
+            height: 500px ;
+            border-radius: 5px;
+            margin: 15px auto;
+            float: right;
+            
+        }
+        .clear{
+            clear: both;
+        }
+        .box{
+            background-color: teal;
+            width: 125px;
+            height: 125px;
+            float: left;
+            margin: 15px ;
+            border-radius: 3px;
+        }
+        #box-cont{
+            width: 750px;
+            height: 650px;
+            margin: auto;
+
+        }
+        .center{
+            text-align: center;
+            margin: auto;
+        }
+        #third-box-cont{
+            width: 750px;
+            height: 1250px;
+            margin: auto;
+        }
+        .first-box{
+            width: 310px ;
+            background-color: wheat;
+            height: 275px;
+            margin: 15px auto;
+        }
+        .second-box{
+            width: 600px;
+            height: 175px;
+        }
+        .large-font{
+            font-size: 28px;
+        }
+        .medium-font{
+            font-size: 25px;
+        }
+        .padding{
+            /* margin-top: 150px ; */
+            /* margin-bottom: 5px ; */
+            padding: 15px;
+        }
+        .second-image{
+            width: 100px;
+            float: left;
+            margin: 15px auto;
+
+        }
+        #khan-details{
+            width: 400px;
+            font-size: 17px;
+            float: left;
+            margin: auto 15px;
+        }
+        .second-name{
+            color: red;
+            width: 150px;
+            float: left;
+            margin: auto;
+        }
+        .third-box{
+            width:930px;
+            margin: 10px auto;
+            height: 145px;
+            padding: 10px;
+            background-color: rgb(212, 88, 5);
+        }
+        .heading{
+            color: white;
+            width: 200px;
+            margin: 20px;
+        }
+        .third-text{
+            color: black;
+            width: 280px;
+            padding: 1px;
+            margin: auto 20px;
+        }
+        .third-1{
+            float: left;
+        }
+        .third-3{
+            float:inline-end;
+            text-align: right;;
+        }
+        .third-2{
+            width: 5px;
+            background-color: black;
+            height: 120px;
+            margin:  auto ;
+        }
+        .line{
+            width: 5px;
+            padding: 1px;
+            margin: 200px auto;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="red-band"></div>
+        <div class="second-box">
+            <div class="light-green-band"></div>
+            <div class="dark-green-band"></div>
+        </div>
+        <hr class="clear">
+        <div id="box-cont">
+            <div class="box"></div>
+            <div class="box clear"></div>
+            <div class="box"></div>
+            <div class="box clear"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box clear"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="clear"></div>
+        </div>
+        <hr class="clear">
+        <div id="thrid-box-cont">
+            <div class="first-box">
+                <div class="center padding"><img width="100px" src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg" alt=""></div>
+                <h1 class="large-font center " >Linus Torvalds</h1>
+                <div class="medium-font center">The creator of Linux & Git</div>
+            </div>
+            <div class="clear"></div>
+            <div class="second-box ">
+                <div class="second-image"><img width="100px" src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg" alt=""></div>
+                <h3 class="large-font padding second-name">Sal Khan</h3>
+                <p id="khan-details">Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.</p>
+            </div>
+            <div class="clear"></div>
+            <div class="third-box">
+                <div class="third-1">
+                    <h2 class="heading">Ken Thompson</h2>
+                    <div class="third-text">Designed and Implemented the original Unix operation system</div>
+                </div>
+                <div class="third-3"> 
+                    <h2 class="heading">Dennis Ritchie</h2>
+                    <div class="third-text">The creator of C Programming Language</div>
+                </div>
+                <div class="center">
+                    <div class="third-2 "></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
