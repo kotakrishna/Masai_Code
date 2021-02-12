@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #main{
+            width: 100%;
+            margin: auto;
+        }
+        #table{
+            width: 100%;
+            margin: auto;
+            border: 1px solid black;
+        }
+        #table td{
+            /* margin: 100px; */
+            border: 1px solid black;
+            font-size: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Form for students Name</h1>
+    <form action=""></form>
+        <label for="Name">Name</label>
+        <input type="text" name="" id="name">
+        <br>
+        <label for="Age">Age</label>
+        <input type="text" name="" id="age">
+        <br>
+        <label for="smarks">Science Marks</label>
+        <input type="text" name="" id="sMarks">
+        <br>
+        <label for="Emglish">English Marks</label>
+        <input type="text" name="" id="eMarks">
+        <br>
+        <label for="Name"> Mathematics Marks</label>
+        <input type="text" name="" id="mMarks">
+        <br>
+        <button>enter</button>
+    </form>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Science Marks</th>
+                    <th>English Marks</th>
+                    <th>Maths Marks</th>
+                    <th>Total</th>
+                    <th> Delete option</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+                <tr>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    var btn=document.querySelector("button")
+    var stName=document.getElementById("name").value
+    var stage=document.getElementById("age").value
+    var stScMarks=document.getElementById("sMarks").value
+    var stEngMarks=document.getElementById("eMarks").value
+    var stMathsMarks=document.getElementById("mMarks").value
+
+
+    function dele(){
+        event.target.parentNode.remove()
+    }
+     function crtlist(){
+        var stName=document.getElementById("name").value
+        var stAge=document.getElementById("age").value
+        var stScMarks=document.getElementById("sMarks").value
+        var stEngMarks=document.getElementById("eMarks").value
+        var stMathsMarks=document.getElementById("mMarks").value
+        var tbody=document.getElementById("tbody")
+        var tr=document.createElement("tr")
+
+        var name=document.createElement("td")
+        name.textContent=stName
+        tr.appendChild(name)
+        var age=document.createElement("td")
+        age.textContent=stAge
+        tr.appendChild(age)
+        var Smarks=document.createElement("td")
+        Smarks.textContent=stScMarks
+        tr.appendChild(Smarks)
+        var Engmarks=document.createElement("td")
+        Engmarks.textContent=stEngMarks
+        tr.appendChild(Engmarks)
+        var Mathmarks=document.createElement("td")
+        Mathmarks.textContent=stMathsMarks
+        tr.appendChild(Mathmarks)
+        var total=document.createElement("td")
+         
+         total.textContent= Number(stEngMarks) + Number(stMathsMarks) + Number(stScMarks)
+
+        tr.appendChild(total)
+
+        var del=document.createElement("button")
+        del.textContent="Delete"
+
+        del.addEventListener("click",dele);
+        tr.appendChild(del)
+        
+        tbody.appendChild(tr)
+     }
+
+    btn.addEventListener("click",crtlist)
+</script>
+</html>

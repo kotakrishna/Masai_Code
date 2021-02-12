@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        body{
+            width: 100%;
+            height: 1200px;
+            margin: auto;
+            margin-top: 10%;
+            
+        }
+        #one{
+            width: 50%;
+            height: 100%;
+            margin: 10% 20% 0% 20% ;
+        }
+        #one> div:nth-child(1){
+            width: 100%;
+            margin:auto ;
+            height: 10%;
+            background-color:red;
+            border-radius: 5px;
+        }
+        #bottom{
+            width: 100%;
+            margin-left:0px;
+            margin-right:0px;
+            height: 60%;
+            margin-top: 2%;
+            padding-top: 10px;
+        }
+        #bottom>div:nth-child(1){
+            background-color: yellowgreen;
+            height: 90%;
+            width: 30%;
+            float: left;
+            border-radius: 5px;
+        }
+        #bottom>div:nth-child(2){
+            background-color: green;
+            height: 90%;
+            width: 63%;
+            float: right;
+            /* margin-left: 5%; */
+            border-radius: 5px;
+        }
+        .clear{
+            clear: both;
+        }
+        #two{
+            margin: 0% 25% 0% 35% ;
+            height: 700px;
+            width: 700px;
+
+        }
+        #two>div{
+            width: 15%;
+            height: 15%;
+            margin: 1%;
+            background-color: teal;
+            float: left;
+        }
+        #two>div:nth-child(2),div:nth-child(4),div:nth-child(7){
+            clear: both;
+        }
+        #three{
+            width: 700px;
+            height: 700px;
+            margin: auto;
+            /* margin: 5%; */
+        }
+        #three>div:nth-child(1){
+            width: 40%;
+            margin-top:1%;
+            height: 35%;
+            background-color: rgb(245, 208, 208);
+            text-align: center;
+            padding: 5%;
+            margin: auto;
+        }
+        #three>div:nth-child(1)>img{
+            width: 100px;
+        }
+        #three>div:nth-child(3){
+            /* clear: both; */
+            float: left;
+            width: 90%;
+            height: 35%;
+            margin: 0%;
+            /* background-color: orange; */
+        }
+        #three>div:nth-child(3)>img{
+            width: 100px;
+            float: left;
+            margin: 10% 5%;
+        }
+        #three>div:nth-child(3)>h1{
+            margin: 10% 0% 0% 0%;
+            color: red;
+        }
+        #three>div:nth-child(5){
+            background-color: rgb(192, 66, 8);
+            width: 100%;
+            height: 20%;
+            margin-bottom: 10%;
+            padding: 2%;
+            color: white;
+        }
+        #three>div:nth-child(5)>div:nth-child(1){
+            text-align: left;
+            float: left;
+            width: 50%;
+        }
+        #three>div:nth-child(5)>div:nth-child(3){
+            text-align: right;
+            float: right;
+            width: 40%;
+        }
+        #three>div:nth-child(5)>div:nth-child(2){
+            text-align: center;
+            width:5px;
+            float: left;
+            height: 130px;
+            padding: 0%;
+            margin: 0%;
+            background-color: black;
+        }
+        #three>div:nth-child(5)>div>p{
+            color: black;
+        }
+        /* #three>div:nth-child(5)>div:nth-child(2){
+            /* background-color: black;
+            width: 1%;
+            height: 65%;
+            margin: auto; */
+            /* float:center; */
+        /* } */ 
+
+        </style>
+    </head>
+    <body>
+        <div id="one">
+            <div id="red"></div>
+            <div class="clear"></div>
+            <div id="bottom">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="two">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="clear"></div>
+        <div id="three">
+            <div>
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg" alt="Linux">
+                <h1>Linus Torvalds</h1>
+                <p>The creator of Linux & Git</p>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg" alt="Sal Khan">
+                <h1>Sal Khan</h1>
+                <p>Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.</p>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <div>
+                    <h1>Ken Thompson</h1>
+                    <p>Designed and Implemented the original Uniz operating system</p>
+                </div>
+                <div></div>
+                <div>
+                    <h1>Dennis Ritchie</h1>
+                    <p>The creator of C Programming Language</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

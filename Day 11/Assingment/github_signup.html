@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        body{
+            background-color: black;
+        }
+        body>div{
+            background-color: rgb(14, 14, 32);
+            width: auto;
+            height: auto;
+            margin-top: 250px;
+            color: white;
+        }
+        div>p{
+            width: 500px;
+            margin: auto;
+            font-size: 20px;
+            text-align: center;
+        }
+        p+div{
+            width: 700px;
+            margin: auto;
+        }
+        label{
+            float: left;
+            font-size: 9px;
+        }
+        input{
+            clear: both;
+            float: left;
+            width: 100px;
+            border-radius: 3px;
+        }
+        form+div{
+            /* margin-left: 500px; */
+            width: 600px;
+            clear: both;
+            text-align: center;
+        }
+        form>div{
+            width: 900px;
+            margin: auto;
+            margin-left: 120px;
+        }
+        form>div>div{
+            float: left;
+            margin: 10px 10px 5px 0px;
+        }
+        
+        form>div>div:nth-child(4)>input{
+            float: right;
+            /* clear: left; */
+            background-color: greenyellow;
+            height: 30px;
+            width: 150px;
+            padding: 2px;
+            margin-top: 5px;
+            margin-right: 150px;
+            margin-bottom: 0px;
+        }
+        form~div{
+            width: 700px;
+            margin: auto;
+            margin-top: 100px;
+            text-align: center;
+            color: rgb(124, 124, 124);
+            font-size: 9px;
+        }
+        h6{
+            width: 49px;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+        }
+        .white{
+            color: white;
+        }
+        ::placeholder{
+            font-size: 9px;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Get started for free -- join the millions of developers already using GitHub to share their code, work together, and build amazing thngs.</p>
+            <div>
+                <form action="">
+                    <div>
+                    <div>
+                        <label for="Username">Username</label>
+                        <input type="text" placeholder="Create a Username">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Create a Email">
+                    </div>
+                    <div>
+                        <label for="">Password</label>
+                        <input type="password" placeholder="Create a Password">
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign up for GitHub">
+                    </div>
+                    </div>
+                </form>
+                   
+                <div>By clicking"Sign up for GitHub", you agree to our <span class="white"> terms of service, </span> and <span class="white">privacy statement</span>. We'll occasionally send you account related emails.</div>
+            </div>
+        </div>
+    </body>
+</html>

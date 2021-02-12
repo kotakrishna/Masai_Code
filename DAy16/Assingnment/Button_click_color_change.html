@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Change the buttons text color random value</h1>
+  <button id="changeColor">Click here to change my color</button>
+  <h1>Click to change my color to an array value!</h1>
+  <ul>
+      <li>
+          <p>red</p>
+      </li>
+    <li>
+        <p>green</p>
+    </li>
+    <li><p>blue</p></li>
+  </ul>
+  <button id="bouns">Click me to change my color to an array value!</button>
+  <script>
+      var changeButton = document.getElementById('changeColor');
+
+      var btn2=document.getElementById("bouns");
+    var i=0;
+      var array_color=["red", "green", "blue"]
+    function random(number){
+        // console.log("submit");
+        return Math.floor(Math.random()*number);
+        
+    }
+
+    function change(){
+        btn2.style.color=array_color[i]
+        i++
+        if(i>2){
+            i=0;
+        }
+    }
+
+    function switchColor(){
+        var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        // console.log("submit2");
+        changeButton.style.color=randomColor;
+    }
+    changeButton.addEventListener('click', switchColor);
+
+    btn2.addEventListener("click",change)
+
+
+    //   var btn=document.querySelector("button")
+    //   function rand(num){
+    //     return Math.floor(Math.random()*num);
+    //   }
+    //   function switchcolor(){
+    //       var randomcolor='rgb(' + rand(255) + ','+rand(255) +','+rand(255)+')'
+    //   }
+    //   btn.addEventListener("click",switchcolor);
+  </script>
+</body>
+</html>

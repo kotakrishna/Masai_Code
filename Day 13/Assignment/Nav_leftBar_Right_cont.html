@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #navigation{
+                display: grid;
+                gap: 20px;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-template:"nav nav  "
+                "left right";
+            }
+            #navigation div{
+                border-radius: 15px;
+            }
+            #nav{
+                grid-area: nav;
+                height: 80px;
+                background-color: red;
+            }
+            #left{
+                grid-area: left;
+                height: 400px;
+                background-color: greenyellow;
+            }
+            #right{
+                grid-area: right;
+                height: 400px;
+                background-color: teal;
+            }
+        </style>
+    </head>
+    <body>
+        
+            <div id="navigation">
+                <div id="nav"></div>
+                <div id="left"></div>
+                <div id="right"></div>
+            </div>
+        
+    </body>
+</html>

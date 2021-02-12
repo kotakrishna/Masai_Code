@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <input type="text" name="" id="year"/>
+        <button onclick="checkAge()">Check Age</button>
+        <p id="message"></p>
+
+
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="purple">First DIV</div>
+        <div class="yellow">Second DIV</div>
+        <div class="orange">Third DIV</div>
+        <p class="purple">First P</p>
+        <p class="yellow">Second P</p>
+        <p class="orange">Third P</p>
+        <hr/>
+        <button onclick="changeH1()">Change H1</button>
+        <button onclick="changeH3()">Change H3</button>
+        <button onclick="changeH5()">Change H5</button>
+        <button onclick="purple()">Change Purple</button>
+        <button onclick="yellow()">Change Yellow</button>
+        <button onclick="orange()">Change Orange</button>
+        <script>
+            function checkAge(){
+                var year=Number(document.getElementById("year").value);
+                // console.log(year);
+                var age=2021-year;
+                if(age==18){
+                    document.getElementById("message").textContent="your 18 and can drive in India";
+                }else if(age>18){
+                    document.getElementById("message").textContent="You can Drive ";
+                }else{
+                    document.getElementById("message").textContent="not old enough";
+                }
+            }
+            function changeH1(){
+                var firstH1=document.querySelectorAll("h1")[0];
+                firstH1.style.color="green"
+            }
+
+            function changeH3(){
+                var thirdH3=document.getElementsByTagName("h3");
+                thirdH3[0].style.color="blue"
+                thirdH3[1].style.color="blue"
+            }
+            function changeH5(){
+                var h5=document.querySelectorAll("h5");
+                for(var i=0 ; i<h5.length;i++){
+                    h5[i].style.color="red"
+                }
+            }
+            function purple(){
+                // console.log(color);
+                var element=document.getElementsByClassName("purple");
+                for(var i=0 ; i<element.length;i++){
+                    element[i].style.color="purple"
+                }  // element.style.color="purple"
+            }
+            function yellow(){
+                var element=document.getElementsByClassName("yellow");
+                for(var i=0 ; i<element.length;i++){
+                    element[i].style.color="yellow"
+                }
+            }
+            function orange(){
+                var element=document.getElementsByClassName("orange");
+                for(var i=0 ; i<element.length;i++){
+                    element[i].style.color="orange"
+                }
+            }
+        </script>
+    </body>
+</html>

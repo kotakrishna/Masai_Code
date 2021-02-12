@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        body{
+            height:1000px
+        }
+        body>div{
+            width: 100vh;
+            height: 500px;
+            margin: auto;
+        }
+        #one>div{
+            width: 20%;
+            margin:2%;
+            background-color: teal;
+            float: left;
+            height: 60%;
+            max-width: 150px;
+            border-radius: 5px;
+            margin-top: 20vh;
+        }
+        div{
+            margin-top: 25vh;
+            max-width: 620px;
+            height: 50vh;
+            margin: auto;
+            
+        }
+        #two{
+            height: 150px;
+            width: 90%;
+            /* margin:20px; */
+        }
+        #two>div{
+            height: 130px;
+            width:100% ;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            float: left;
+            margin: 0px;
+            /* margin-bottom: 0px; */
+            /* clear: both; */
+        }
+        #two>div>div{
+            background-color: teal;
+            height: 50%;
+            float: left;
+            width:20% ;
+            border-radius: 10px;
+            /* clear: both; */
+            margin-left: 2%;
+        }
+        #two>div:nth-child(1)>div:nth-child(2){
+            width: 50%;
+
+        }
+        #two>div:nth-child(2)>div:nth-child(1){
+            width: 50%;
+
+        }
+        #two>div:nth-child(3)>div:nth-child(3){
+            width: 50%;
+        }
+        #three{
+            height: 10px;
+            width: 1000px;
+            margin: auto;
+            max-width: 1024px;
+            /* margin:20px; */
+        }
+        h1,p{
+            text-align: center;
+        }
+        p{
+            font-size: 16px;
+            line-height: 32px;
+
+        }#campus-cont{
+            width: 100%;
+            margin: 0.5%;
+            /* float: left; */
+            margin-top: 30vh;
+            max-width: 550px;
+            height: 1vh;
+            margin: auto;
+        }
+        #campus-cont>div{
+            float: left;
+            width: 30%;
+            float: left;
+            margin: auto;
+        }
+        #campus-cont>div>div{
+            border: 1px solid gray;
+            background-color: silver;
+            padding: 10px;
+            height: 22%;
+            margin: 10px;
+            /* float: left; */
+        }
+        #campus-cont img{
+            max-width: 100%;
+        }
+        .clear{
+            clear: both;
+            height: 5px;
+
+        }
+        </style>
+    </head>
+    <body>
+        <div id="one">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="clear"></div>
+        <div id="two">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="three">
+            <h1>Masai School Campus</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga itaque, iusto ratione eaque adipisci amet deleniti eum sapiente sed, debitis provident similique voluptatem culpa aspernatur incidunt mollitia quaerat repudiandae totam.</p>
+            <div id="campus-cont">
+                <div>
+                    <div>
+                        <img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg" alt="">
+                    </div>
+                    <p>91springboard, Bangalore</p>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://www.masaischool.com/static/campus/location_2/bhive_min_2.jpg" alt="">
+                    </div>
+                    <p>BHIVE, Bangalore</p>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://www.masaischool.com/static/campus/location_3/workstudio_min_2.jpg" alt="">
+                    </div>
+                    <p>Work studio, Patna</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

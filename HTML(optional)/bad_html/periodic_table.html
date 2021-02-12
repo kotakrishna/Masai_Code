@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        body>div{
+            width: 1200px;
+            height: 850px;
+            margin: auto;
+            border: 1px solid red;
+            padding: 30px;
+        }
+        #heading{
+            border: 1px solid blue;
+            width: 60%;
+            height: 8%;
+            margin: auto;
+        }
+        #middle{
+            border: 1px solid blue;
+            width: 95%;
+            height: 65%;
+            margin: 5% auto;
+            padding: 1.5%;
+        }
+        #bottom{
+            border: 1px solid blue;
+            width: 40%;
+            height: 10%;
+            margin:  auto;
+        }
+        #left{
+            float: left;
+            border: 1px solid black;
+            height: 95%;
+            width: 17%;
+            margin: auto 0.5%;
+        }
+       
+        #center{
+            float: left;
+            height: 95%;
+            width: 46%;
+            margin: auto ;
+            border: 1px solid yellowgreen;
+            margin: auto 0.5%;
+        }
+        #center>div:nth-child(1){
+            height: 150px;
+            width: 97%;
+            margin: 0.5% auto;
+            border: 1px solid black;
+        }
+        #center>div:nth-child(2){
+            height: 300px;
+            width: 97%;
+            margin: 0.5% auto;
+            border: 1px solid black;
+        }
+        #right{
+            height: 93%;
+            width: 29%;
+            float: left;
+            border: 1px solid red ;
+            
+        }
+        #left>div>div{
+            background-color: red;   
+            float: left;         
+        }
+        #center>div:nth-child(1)>div{
+            border: 1px solid black;
+            height: 92%;
+            width: 30%;
+            float: left;
+            margin: 1%;
+            background-color: rgb(7, 187, 7);
+        }
+        #center>div:nth-child(2) div>div{
+            float: left;
+            background-color: blue;
+        }
+       
+        #right>div div{
+            background-color: yellowgreen;
+            float: right;
+        }
+        #right>div div, #center>div:nth-child(2) div>div,#left>div>div{
+            width: 42px;
+            height: 42px;
+            border: 1px solid black;
+            margin: 5.2px 5.2px;
+        }
+        
+        #center>div:nth-child(2){
+            margin-top: 15px;
+        }
+        #right>div, #center>div:nth-child(2)>div, #left>div{
+            border: 1px solid violet;
+            height: 50px;
+            margin: 5px auto;
+            padding: 0px;
+        }
+        .clear{
+            clear: both;
+        }
+        div{
+            border: 0px !important;
+        }
+        #left>div>div, #right>div>div, #bottom>div>div,#center>div>div>div,#center>div:nth-child(1)>div:nth-child(1){
+            border: 1px solid black !important;
+        }
+
+        #bottom>div{
+            height: 40%;
+            width: 99%;
+            border: 1px solid blue;
+            margin: 0px;
+
+        }
+        #bottom>div:nth-child(1)>div{
+            background-color: rgb(2, 88, 2);
+        }
+        #bottom>div:nth-child(2)>div{
+            background-color: rgb(7, 187, 7);
+        }
+        #bottom>div div{
+            height: 94.5%;
+            width: 6.5%;
+            border: 1px solid black;
+            float: left;
+            margin: 0px;
+        }
+        #bottom>div:nth-child(1)>div:nth-child(1){
+            color: white;
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+        }
+        #center>div:nth-child(1)>div>p:nth-child(1){
+            text-align: right;
+            font-size: 20px;
+            margin: 3px 5px;
+        }
+        #center>div:nth-child(1)>div>p:nth-child(3){
+            text-align: left;
+            font-size: 20px;
+            margin: 1px 3px;
+        }
+        #center>div:nth-child(1)>div>h1{
+            font-size: 45px;
+            margin: 15px 3px;
+            /* margin-top: 1px; */
+            text-align: left;
+        }
+        h1{
+            font-size: 30px;
+            text-align: center;
+        }
+        #left>div:nth-child(1)>div{
+            background-color: rgb(107, 47, 7);
+            color: white;
+        }
+        #left>div>div:nth-child(2){
+            background: rgb(235, 94, 117);
+        }
+        #left>div>div:nth-child(3){
+            background: rgb(250, 233, 78);
+        }
+        #right>div>div:nth-child(1){
+            background: rgb(250, 233, 78);
+        }
+        #right>div>div:nth-child(2){
+            background: rgb(221, 57, 71);
+        }
+        #right>div:nth-child(5)>div:nth-child(4),#right>div:nth-child(5)>div:nth-child(3),#right>div:nth-child(6)>div:nth-child(3),
+        #right>div:nth-child(4)>div:nth-child(4),#right>div:nth-child(4)>div:nth-child(5),
+        #right>div:nth-child(3)>div:nth-child(5),#right>div:nth-child(2)>div:nth-child(6){
+            background: purple;
+        }
+        #right>div:nth-child(3)>div:nth-child(6),#right>div:nth-child(4)>div:nth-child(6),#right>div:nth-child(5)>div:nth-child(6),
+        #right>div:nth-child(6)>div:nth-child(4),#right>div:nth-child(6)>div:nth-child(5),
+        #right>div:nth-child(5)>div:nth-child(5),#right>div:nth-child(6)>div:nth-child(6){
+            background: rgb(243, 138, 1);
+        }
+        /* #right>div:nth-child(4)>div:nth-child(4),#right>div:nth-child(4)>div:nth-child(5){
+            background: purple;
+        }
+        #right>div:nth-child(3)>div:nth-child(5),#right>div:nth-child(2)>div:nth-child(6){
+            background: purple; */
+        }
+        #left>div>div:nth-child(1){
+            background: rgb(7, 187, 7);
+            border: 2px black !important;
+        }
+        #left>div:nth-child(1)>div{
+            background-color: rgb(107, 47, 7);
+            color: white;
+        }
+        #right>div:nth-child(7)>div{
+            background: rgb(83, 45, 10);
+        }
+        /* #left>div>div:nth-child(1){
+            background: rgb(7, 187, 7);
+        } */
+        .purple{
+            background-color: purple;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="heading"><h1>THE PERIODIC TABLE OF ELEMENTS</h1></div>
+            <div id="middle">
+                <div id="left">
+                    <div>
+                        <div><p>H</p></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div><p>4</p></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div><p>12</p></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div><p>20</p></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div><p>38</p></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div><p>56</p></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div><p>88</p></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div id="center">
+                    <div>
+                        <div>
+                            <p>14</p>
+                            <h1>Si</h1>
+                            <p>Silicon</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="clear"></div> -->
+                <div id="right">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="purple"></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="purple"></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="purple"></div>
+                        <div class="purple"></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div class="purple"></div>
+                        <div class="purple"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div class="purple"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">
+                <div>
+                    <div>La</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div>Am</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div>No</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

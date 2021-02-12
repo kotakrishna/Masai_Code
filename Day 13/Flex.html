@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #cont1{
+                /* margin: auto; */
+                display: flex;
+            }
+            #cont1>div{
+                /* height: 500px;
+                width: 90px;
+                background-color: teal;
+                margin: 10px; */
+                background-color: teal;
+                flex-basis: 20%;
+                border-radius: 5px;
+                margin: 5%;
+                height: 600px;
+            }
+            #forgrid{
+                margin-left: 300px;
+                display: grid;
+                grid-template-columns: 200px 200px 200px 200px;
+                grid-template-rows: 200px 200px;
+                gap: 40px;
+            }
+            #forgrid>div{
+                background-color: teal;
+            }
+            #navigation-box{
+                display: grid;
+                gap: 30px;
+                grid-template: "nav"
+                "left"
+                "right"
+
+            }
+            
+            #nav{
+                background-color:yellow;
+                height: 50px;
+                grid-area: nav;
+            }
+            #left{
+                background-color:red;
+                grid-area: left;
+                height: 300px;
+            }
+            #right{
+                background-color:greenyellow;
+                grid-area: right;
+                height: 300px;
+            }
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px){
+                #navigation-box{
+                grid-template: "nav nav"
+                "left right";
+                }
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="cont1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="forgrid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="navigation-box">
+            <div id="nav">Navigation</div>
+            <div id="left">LEFT BOX</div>
+            <div id="right">RIGHT</div>
+        </div>
+    </body>
+</html>

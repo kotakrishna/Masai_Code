@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body>div{
+                width: 900px;
+                height: 1000px;
+                margin: auto;
+                
+                padding: 4%;
+            }
+            #top{
+                height:15%;
+                width: 100%;
+                background-color: rgb(231, 230, 230);
+               
+                padding: 2%;
+            }
+            #bottom{
+                height: 79%;
+                width: 104%;
+                
+            }
+            #scholarship{
+                width: 99%;
+                margin: auto;
+                margin-top: 30px;
+                
+                display: flex;
+                gap:20%
+            }
+            
+            #scholarship img{
+                float: left;
+                margin: 3%;
+            }
+            #scholarship>div:nth-child(1){
+                background-color: rgb(224, 185, 11);
+            }
+            #scholarship>div:nth-child(2){
+                background-color: blue; 
+            }
+            #scholarship>div:nth-child(3){
+                background-color: turquoise; 
+            }
+            .txt_colour h3{
+                margin: 0%;
+                margin-top: 3%;
+
+            }
+            .txt_colour{
+                padding: 0/8%;
+                color: white;
+                border-radius: 10px;
+                margin: 0%;
+                margin-top: 3%;
+                width: 100%;
+                margin: auto;
+                border: 1px solid blue; 
+            }
+            #nameing>h1{
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                margin-top:10px ;
+                font-size: 31px;
+            }
+            #typeofGrad{
+                background-color: rgb(224, 222, 222);
+                height: 5%;
+                width: 39%;
+                margin: auto;
+                margin-top: 20px;
+                display: flex;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .grad{
+                height: 100%;
+                width: 100%;
+                margin: auto;
+                margin-top: 0%;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .oddone{
+                background-color: aqua;
+                color: white;
+            }
+            #ProgramType{
+                margin: auto;
+                margin-top: 10%;
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(3,300px);
+            }
+            .program_1{
+                padding: 5%;
+                height: 100%;
+                width: 90%;
+                margin: auto;
+                border-radius: 5px;
+                background-color: rgb(224, 221, 221);
+            }
+            .program_1 img{
+                width: 100%;
+                margin: auto;
+            }
+            .program_1 button{
+                height: 40px;
+                width: 100%;
+                margin: auto;
+                /* margin-left: 10%; */
+                color: teal;
+                border: 1px solid teal;
+                border-radius:2px ;
+                background-color: rgb(224, 221, 221);
+            }
+
+                @media only screen and (max-width: 600px) {
+                    #top{
+                        height: 30%;
+                        width: auto;
+                    }
+                    #scholarship{
+                        flex-direction: column;
+                        width: 20%;
+                        height: 30%s;
+                        gap: 20px
+                    }
+                    #ProgramType{
+                        display: flex;
+                        flex-direction: column;
+                        width: 20%;
+                    }
+                } 
+
+                /* Small devices (portrait tablets and large phones, 600px and up) */
+                @media only screen and (min-width: 600px) {
+                    #ProgramType{
+                        grid-template-rows: repeat(3,300px);
+                        
+                    }
+                } 
+
+                
+            
+        </style>
+    </head>
+    <body>
+    <div>
+        <div id="top">
+            <div id="scholarship">
+                <div class="txt_colour"> <img src="https://via.placeholder.com/58x50" alt="scholar1"> <h3>Scholarship</h3><p>Avaiable</p></div>
+                <div class="txt_colour"> <img src="https://via.placeholder.com/58x50" alt="scholar2"> <h3>Scholarship</h3><p>Avaiable</p></div>
+                <div class="txt_colour"> <img src="https://via.placeholder.com/58x50" alt="scholar3"> <h3>Scholarship</h3><p>Avaiable</p></div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="nameing">
+                <h1>Popular Program</h1>
+            </div>
+            <div id="typeofGrad">
+                <div class="grad oddone"><p>Graduate</p></div>
+                <div class="grad"><p>Graduate</p></div>
+                <div class="grad"><p>Graduate</p></div>
+                <div class="grad"><p>Graduate</p></div>
+            </div>
+            <div id="ProgramType">
+                <div class="program_1">
+                    <img src="https://via.placeholder.com/250x250" alt="program1">
+                    <p>Agriculture</p>
+                    <h2>Chemical engineering</h2>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum molestias dolores hic harum inventore quam optio vitae facilis porro</h6>
+                    <button>Apply Now</button>
+                </div>
+                <div class="program_1">
+                    <img src="https://via.placeholder.com/250x250" alt="program1">
+                    <p>Agriculture</p>
+                    <h2>Chemical engineering</h2>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum molestias dolores hic harum inventore quam optio vitae facilis porro</h6>
+                    <button>Apply Now</button>
+                </div>
+                <div class="program_1">
+                    <img src="https://via.placeholder.com/250x250" alt="program1">
+                    <p>Agriculture</p>
+                    <h2>Chemical engineering</h2>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum molestias dolores hic harum inventore quam optio vitae facilis porro</h6>
+                    <button>Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

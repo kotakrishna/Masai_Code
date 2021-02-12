@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+    <div>
+        <input type="text" name="" id="age"/>
+        <button onclick="tellage()">Check</button>
+        <p id="output"></p>
+    </div>
+    <div>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="H1toRed()">Change H1</button>
+        <button onclick="H3togreen()">Change H3</button>
+        <button onclick="H5toblue()">Change H5</button>
+        <button onclick="Class_to_green()">Change Green</button>
+        <button onclick="Class_to_red()">Change Red</button>
+        <button onclick="Class_to_blue()">Change Blue</button>
+    </div>
+    <div id="inputval">
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id="btn" onclick="create_h1()">Create H1</button>
+        <button onclick="create2_h3()">Create 2 H3</button>
+        <button onclick="CreateDiv()">Create DIVS</button>
+        <button onclick="Add_student()">Add Students</button>
+        <button onclick="Copyright()">Add Copyright</button>
+    </div>
+    <div id="third">
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings2">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont2">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="RemoveH1()">Remove H1</button>
+        <button onclick="RemoveH3()">Remove H3</button>
+        <button onclick="RemoveH5()">Remove H5</button>
+        <button onclick="RemoveRED()">Remove Red</button>
+        <button onclick="RemoveDIVS()">Remove DIVS</button>
+    </div>
+    <script>
+        var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+        function tellage(){
+            var age=Number(document.getElementById("age").value)
+            if(age==18){
+                document.getElementById("output").textContent="You are just old enough to drive in India!"
+            }else if(age>18){
+                document.getElementById("output").textContent="You can drive in India!"
+            }else{
+                document.getElementById("output").textContent="You can't drive in India"
+            }
+        }
+        function H1toRed(){
+            var H1=document.getElementsByTagName("h1")
+            for(var i=0;i<H1.length;i++){
+                H1[0].style.color="red"
+            }
+        }
+        function H3togreen(){
+            var H3=document.getElementsByTagName("h3")
+            for(var i=0;i<H3.length;i++){
+                H3[i].style.color="green"
+            }
+        }
+        function H5toblue(){
+            var H5=document.querySelectorAll("h5")
+            for(var i=0;i<H5.length;i++){
+                H5[i].style.color="blue"
+            }
+        }
+        function Class_to_green(){
+            var green=document.getElementsByClassName("green")
+            for(var i=0;i<green.length;i++){
+                green[i].style.color="green"
+            }
+        }
+        function Class_to_blue(){
+            var blue=document.getElementsByClassName("blue")
+            for(var i=0;i<blue.length;i++){
+                blue[i].style.color="blue"
+            }
+        }
+        function Class_to_red(){
+            var red=document.getElementsByClassName("red")
+            for(var i=0;i<red.length;i++){
+                red[i].style.color="red"
+            }
+        }
+        function create_h1(){
+            var h1=document.createElement('h1');
+            h1.textContent="MASAI";
+            var heading1=document.getElementById("headings");
+            heading1.append(h1)
+        }
+        function create2_h3(){
+            var h3=document.createElement('h3');
+            h3.textContent="A Transformation in education!";
+            var h3_1=document.createElement('h3');
+            h3_1.textContent="Learn to earn, pay when you get. ";
+            var heading1=document.getElementById("headings");
+            heading1.append(h3)
+            heading1.append(h3_1)
+        }
+        function CreateDiv(){
+            var div=document.getElementById("cont")
+            for(var i=1;i<=10;i++){
+                var x=document.createElement('p')
+                x.textContent="Content " + i
+                div.append(x)
+            }
+        }
+        function Add_student(){
+            var list=document.getElementById("vikings")
+            for(var i=0;i<students.length;i++){
+                var p=document.createElement("li")
+                p.textContent=students[i]
+                list.appendChild(p)
+            }
+        }
+        function Copyright(){
+            var pr=document.createElement('p');
+            pr.textContent=" @ masai 2019";
+            var btn=document.getElementById("btn");
+            var bodyele=document.getElementById("inputval");
+            bodyele.insertBefore(pr, btn);
+        }
+        function RemoveH1(){
+            var third=document.getElementById("third")
+            var x=third.querySelector("h1")
+            x.remove();
+        }
+        function RemoveH3(){
+            var third=document.getElementById("third")
+            var x=third.querySelectorAll("h3")
+            for(var i=0;i<x.length;i++){
+                x[i].remove();
+            }
+        }
+        function RemoveH5(){
+            // var heading2=document.getElementById("headings2")
+            var x=document.querySelectorAll("h5")
+            for(var i=0;i<x.length;i++){
+                x[i].remove();
+            }
+        }
+        function RemoveRED(){
+            var x=document.querySelectorAll(".red")
+            for(var i=0;i<x.length;i++){
+                x[i].remove();
+            }
+        }
+        function RemoveDIVS(){
+            var x=document.querySelectorAll("#cont2 > div")
+            for(var i=0;i<x.length;i++){
+                x[i].remove();
+            }
+        }
+    </script>
+    </body>
+</html>

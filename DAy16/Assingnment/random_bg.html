@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>        
+    </body>
+
+    <script>
+    var body=document.querySelector("body") 
+    
+
+    function random(number){
+        console.log("submit12");
+        return Math.floor(Math.random()*number)
+    }
+
+    function color(){
+        console.log("sbmit!");
+        var radomcolor= "rgb(" + random(255)+ "," + random(255)+ "," + random(255) +")"
+        console.log(radomcolor);
+        body.style.backgroundColor=radomcolor
+    }
+    body.onresize = color;
+    body.onclick = color;
+    
+
+    </script>
+</html>

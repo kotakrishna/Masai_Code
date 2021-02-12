@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        .blue{
+            color: blue;
+        }
+        </style>
+    </head>
+<body>
+  <h1>My color should change when I double click the button!</h1>
+  <button id="btn">Click here to change my color</button>
+  <script>
+      var btn=document.getElementById('btn')
+      var generatecolor= function(){
+          var h1=document.querySelector("h1")
+            h1.setAttribute('class',"blue")
+      }
+      btn.addEventListener("dblclick",generatecolor);
+      
+  </script>
+</body>
+</html>

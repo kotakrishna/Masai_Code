@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body>div{
+                width: 300px;
+                margin: auto;
+            }
+            table td{
+                background-color: blue;
+                border: 1px solid black;
+                color: white;
+                border-radius: 3px;
+            }
+            table button{
+                background-color: white;
+                color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>This is a TO-DO List</h1>
+            <form id="form">
+                <input type="text" name="" id="item"/>
+                <input type="submit" value="Add Item"/>
+            </form>
+            <table>
+                <tr>
+                    
+                </tr>
+            </table>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var form=document.querySelector("form");
+        var table=document.querySelector("table")
+
+        function complete(event){
+            var target= event.target;
+            target.textContent="Completed";
+            target.style.background="green";
+            target.removeEventListener("click", complete);
+        }
+        function deletes(event){
+            var target=event.target;
+            target.parentNode.parentNode.remove();
+        }
+
+
+        function addItem(e){
+            e.preventDefault();
+            console.log("submit");
+            var item =document.getElementById("item").value;
+            if(item.length>0){
+            var row= document.createElement("tr");
+            var col1=document.createElement("td");
+            var col2=document.createElement("td");
+            var col3=document.createElement("td");
+            var del=document.createElement("button");
+            var btn=document.createElement("button");
+
+            //add th e content
+            col1.textContent=item;
+            btn.textContent="Mark Complete";
+            btn.addEventListener("click",complete)
+
+            del.textContent="Delete";
+            del.addEventListener("click",deletes);
+            //adding btn to scnd column
+            col2.appendChild(btn);
+            col3.appendChild(del);
+            //adding value to row
+            row.appendChild(col1);
+            row.appendChild(col2);
+            row.appendChild(col3);
+
+            table.appendChild(row);
+            }
+            document.getElementById("item").value="";
+        }
+        form.addEventListener("submit",addItem)
+    </script>
+</html>

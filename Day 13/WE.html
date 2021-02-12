@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        #first-flex{
+            width: 1200px;
+            margin: auto;
+        }
+        #first,#second,#third{
+            display: flex;
+            align-content: center;
+        }
+        #first>div, #second>div,#third>div{
+            background-color: teal;
+            height: 200px;
+            margin: 20px;
+            flex-basis: 200px;
+            border-radius: 5px;
+        }
+        #first>div:nth-child(2), #second>div:nth-child(1),#third>div:nth-child(3){
+            flex-grow: 1;
+        }
+        #second-grid{
+            width: 700px;
+            margin: auto;
+            /* margin-left: 400px;
+            margin-top: 200px;
+            margin-bottom: 200px; */
+            align-content: center;
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 150px 150px 150px 150px;
+        }
+        #second-grid>div{
+            background-color: teal;
+        }
+        #second-grid>div:nth-child(8){
+            /* grid-row-start: 3;
+            grid-column-start: 1; */
+            grid-area: 3/1;
+            }
+        #second-grid>div:nth-child(9){
+            /* grid-row-start: 3;
+            grid-column-start: 2; */
+            grid-area: 3/2;
+        }
+        #second-grid>div:nth-child(10){
+            /* grid-row-start: 4;
+            grid-column-start: 1; */
+            grid-area: 4/1;
+        }
+        #media{
+            width: 700px;
+            margin: auto;
+            display: grid;
+            gap: 25px;
+            grid-template:"nav nav"
+            "left right" ;
+        }
+        #nav{
+            height: 75px;
+            background-color: yellow;
+            grid-area: nav;
+        }
+        #left{
+            height: 350px;
+            background-color: red;
+            grid-area: left;
+        }
+        #right{
+            height: 350px;
+            background-color: blue;
+            grid-area: right;
+        }
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            #media{
+                grid-template:"nav""right""left";
+            }
+        } 
+        </style>
+    </head>
+    <body>
+        <div id="first-flex">
+            <div id="first">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="second">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="third">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="second-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="media">
+            <div id="nav"></div>
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+    </body>
+</html>

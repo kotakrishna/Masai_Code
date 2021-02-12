@@ -1,0 +1,242 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+        .clearx{
+            clear: both;
+        }
+        #third-box-cont{
+            width: 950px;
+            height: 850px;
+            margin: auto;
+            
+        }
+        .first-box{
+            width: 310px ;
+            background-color: wheat;
+            height: 275px;
+            margin: 15px auto;
+            border: 1px solid black;
+        }
+        .second-box{
+            width: 600px;
+            height: 175px;
+            margin: auto;
+        }
+        .large-font{
+            font-size: 28px;
+        }
+        .medium-font{
+            font-size: 20px;
+            text-align: center;
+        }
+        .paddingx{
+            /* margin-top: 150px ; */
+            /* margin-bottom: 5px ; */
+            padding: 15px;
+        }
+        .second-image{
+            width: 100px;
+            float: left;
+            margin: 15px auto;
+
+        }
+        .center{
+            text-align: center;
+            margin: auto;
+        }
+        #khan-details{
+            width: 400px;
+            font-size: 17px;
+            float: left;
+            margin: auto 15px;
+        }
+        .second-name{
+            color: red;
+            width: 150px;
+            float: left;
+            margin: 15px;
+
+        }
+        .third-box{
+            width:930px;
+            margin: 10px auto;
+            height: 145px;
+            padding: 10px;
+            background-color: rgb(212, 88, 5);
+        }
+        .heading{
+            color: white;
+            width: 200px;
+            margin: 20px;
+        }
+        .third-text{
+            color: black;
+            width: 280px;
+            padding: 1px;
+            margin: auto 20px;
+        }
+        .third-1{
+            float: left;
+        }
+        .third-3{
+            float:inline-end;
+            text-align: right;;
+        }
+        
+        .third-2{
+            width: 5px;
+            background-color: black;
+            height: 120px;
+            margin:  auto ;
+        }
+        .line{
+            width: 5px;
+            padding: 1px;
+            margin: 200px auto;
+        }
+        .img{
+            width: 100px;
+        }
+        .center{
+            text-align: center;
+            margin: auto;
+        </style>
+    </head>
+    <body>
+       <button>Create Page</button>
+    </body>
+    <script>
+        var body=document.querySelector("body")
+        
+
+        var btn=document.querySelector("button")
+        function main(){
+            var main=document.createElement("div");            
+
+            main.setAttribute("id","third-box-cont")
+            body.appendChild(main)
+
+
+            var first_box=document.createElement("div")
+            first_box.setAttribute('class','first-box')
+            main.appendChild(first_box);
+
+            var img_Linux=document.createElement("div")
+            img_Linux.setAttribute("class","center")
+            img_Linux.setAttribute("class","paddingx")
+            img_Linux.style.margin="auto"            
+            img_Linux.setAttribute("class","for_linux_img")
+            first_box.appendChild(img_Linux)
+
+            var img_Linux_img=document.createElement("img")
+            img_Linux_img.setAttribute("src","https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg")
+            img_Linux_img.setAttribute("alt","Linux")
+            /* img_Linux_img.setAttribute("class","center") */
+            img_Linux_img.style.width="100px";
+            img_Linux_img.style.margin="10px 110px";
+            img_Linux.appendChild(img_Linux_img)
+
+            
+
+            var Linux_name=document.createElement("h1");
+            Linux_name.textContent="Linux" ;
+            Linux_name.setAttribute("class","large-font");
+            Linux_name.setAttribute("class","center");
+            first_box.appendChild(Linux_name);
+
+            var Linux_details=document.createElement("div")
+            Linux_details.textContent="The creator of Linux & Git"
+            Linux_details.setAttribute("class","center")
+            Linux_details.setAttribute("class","medium-font")
+            first_box.appendChild(Linux_details)
+
+            var clear_second_space=document.createElement("div")
+            clear_second_space.setAttribute("class","clearx")
+            main.appendChild(clear_second_space)
+
+            var second_box=document.createElement("div")
+            second_box.setAttribute("class","second-box");
+            main.appendChild(second_box)
+
+            var Khan_img_space=document.createElement("div")
+            Khan_img_space.setAttribute("class","second-image")
+            second_box.appendChild(Khan_img_space);
+
+            var Khan_img=document.createElement("img")
+            Khan_img.setAttribute("src","https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg")
+            Khan_img.setAttribute("alt","Khan")
+            Khan_img.style.width="100px";
+            Khan_img_space.appendChild(Khan_img)
+
+
+            var Khan_name=document.createElement("h3")
+            Khan_name.setAttribute("class","large-font")
+            Khan_name.setAttribute("class","paddingx")
+            Khan_name.setAttribute("class","second-name")
+            Khan_name.textContent="Sal Khan";
+            second_box.appendChild(Khan_name)
+
+            var Khan_details=document.createElement("p")
+            Khan_details.textContent="Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere."
+            Khan_details.setAttribute("id","khan-details")
+            second_box.appendChild(Khan_details)
+
+            var div_2 = document.createElement("div")
+            div_2.setAttribute("class","clearx")
+            main.appendChild(div_2)
+
+            var third_box=document.createElement("div")
+            third_box.setAttribute("class","third-box")
+            main.appendChild(third_box)
+
+            var third_1=document.createElement("div")
+            third_1.setAttribute("class","third-1")
+            third_box.appendChild(third_1)
+
+            var Ken_name=document.createElement("h2")
+            Ken_name.setAttribute("class","heading")
+            Ken_name.textContent="Ken Thompson"
+            third_1.appendChild(Ken_name)
+
+            var Ken_details=document.createElement("div")
+            Ken_details.setAttribute("class","third-text")
+            Ken_details.textContent="Designed and Implemented the original Unix operation system."
+            third_1.append(Ken_details)
+
+
+            var third_3=document.createElement("div")
+            third_3.setAttribute("class","third-3")
+            third_box.appendChild(third_3)
+
+            var Dennis_name=document.createElement("h2")
+            Dennis_name.setAttribute("class","heading")
+            Dennis_name.textContent="Dennis Ritchie"
+            third_3.appendChild(Dennis_name)
+
+            var Dennis_details=document.createElement("div")
+            Dennis_details.setAttribute("class","third-text")
+            Dennis_details.textContent="The creator of C Programming Language"
+            third_3.appendChild(Dennis_details)
+
+            var x=document.createElement("div")
+            x.setAttribute("class","center")
+            third_box.appendChild(x)
+
+            var third_2=document.createElement("div")
+            third_2.setAttribute("class","third-2")
+            third_box.appendChild(third_2)
+        }
+        
+        function call(){
+            event.target.remove()
+            main();    
+        }
+        /* btn.setAttribute("click",call) */
+        btn.onclick=call;
+    </script>
+</html>

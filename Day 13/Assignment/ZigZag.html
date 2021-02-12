@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        body>div{
+            width: 700px;
+            height: 800px;
+            margin: auto;
+        }
+        body>div>div div{
+            margin: 10px;
+            border: 1px solid black;
+            height: 40%;
+            flex-basis: 100px;
+            background-color: teal;
+            border-radius: 5px;
+        } 
+        #first,#second,#third{
+            height: 30%;
+            display: flex;
+            margin: 10px;
+        }
+        #first>div:nth-child(2),#second>div:nth-child(1),#third>div:nth-child(3){
+            flex-grow:1 ;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="first">
+                <div></div>
+                <div></div>
+                <div></div>
+                
+            </div>
+            <div id="second">
+                <div></div>
+                <div></div>
+                <div></div>
+                
+            </div>
+            <div id="third">
+                <div></div>
+                <div></div>
+                <div></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

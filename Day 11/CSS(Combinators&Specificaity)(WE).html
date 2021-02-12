@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        #body{
+            width: 600px;
+            padding: 100px;
+            /* float: left; */
+            margin: auto;
+        }
+        #left-cont{
+            float: left;
+            height: 300px;
+            width: 200px;
+        }
+        /* :left-cont input{
+            border: 1px solid black;
+            width: 500px;
+            height: 40px;
+            margin-top: 10px;
+        } */
+        #left-cont label{
+            font-size: 20px;
+            padding: 0px 0px;
+            margin-top: 10px;
+        }
+        label,input{
+            display: block;
+            width: 200px;
+            padding: 4px 0px;
+            margin: 5px 0px;
+        }
+        #warn{
+            color: red;
+        }
+        #left-cont input[type="submit"]{
+            background-color: black;
+            width: 200px;
+            color: white;
+            font-size: 15px;
+            margin: auto;
+            padding: 6px;
+            height: 30px;
+        }
+    
+        #right-cont > div{
+            background-color: black;
+            float: right;
+            height: 200px;
+            color: white;
+            padding: 30px 20px;
+
+        }
+        #right-cont > div > p:nth-child(6){
+            font-size: 20px;
+            margin-top: 2px;
+            margin-bottom:10px;
+        }
+        #right-cont > div > p:nth-child(odd){
+            font-size: 18px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        #right-cont > div > p:nth-child(2){
+            font-size: 35px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        #right-cont > div > p:nth-child(4){
+            font-size: 18px;
+            margin-top: 2px;
+            margin-bottom:30px ;
+
+        }
+        </style>
+    </head>
+    <body>
+        <div id="body">
+            <div id="left-cont">
+                <form>
+                <label for="name">NAME</label>
+                <input id="name" type="text"/>
+                
+                <label for="email">EMAIL</label>
+                <input id="email" type="email" />
+                
+                <label for="mobile">MOBILE</label>
+                <input id="mobile">
+                <label id="warn"> Enter a valid Number</label>
+                <input type="submit" value="REGISTER"/>
+            </form>
+            </div>
+            <div id="right-cont">
+                <div>
+                    <p>NAME</p>
+                    <p>MASAI</p>
+                    <p>EMAIL</p>
+                    <p>email@masaischool.com</p>
+                    <p>MOBILE</p>
+                    <p>9876543210</p>
+                </div>                
+            </div>
+        </div>
+    </body>
+</html>

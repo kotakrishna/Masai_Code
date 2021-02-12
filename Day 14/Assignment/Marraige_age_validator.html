@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="number" name="" id="year"/>
+        <select name="" id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <button onclick="check()">Check</button>
+    </body>
+    <script>
+        function check(){
+            var gen=document.getElementById("Gender").value;
+            var BY=document.getElementById("year").value
+            var age= 2021 - Number(BY);
+
+            console.log(gen)
+            console.log(age)
+            if(gen=="Male"){
+                if(age>=23){
+                    alert("valid legal age to get married")
+                }else{
+                    alert("Not valid legal age to get married")
+                }
+            }else{
+                if(age>=21){
+                    alert("valid legal age to get married")
+                }else{
+                    alert("Not valid legal age to get married")
+                }
+            }
+        }
+    </script>
+</html>

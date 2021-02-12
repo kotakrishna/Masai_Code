@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        #mains{
+            margin: auto;
+            width: 700px;
+        }
+        #values{
+            display: grid;
+            grid-template:"min max" ;
+            gap: 20px;
+        }
+        #min{
+            height: 80px;
+            width: 80px;
+            background-color: red;
+            border: 1px solid black;
+            grid-area: min;
+            font-size: 50px;
+            /* margin-left: 200px; */
+        }
+        #max{
+            height: 80px;
+            width: 80px;
+            background-color: green;
+            border: 1px solid black;
+            grid-area: max;
+            font-size: 50px;
+        }
+        #number{
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 70px 70px 70px ;
+            grid-template-rows:  70px 70px 70px 70px;
+            gap: 20px;
+            height: 260px
+        }
+        #number button{
+            font-size: 30px;
+        }
+        #number>div:nth-child(10){
+            margin: auto ; 
+            width: 100px;
+            height: 200px;
+        }
+        .green{
+            background-color: rgb(0, 77, 0);
+        }
+        .orange{
+            background-color: rgb(221, 145, 3);
+        }
+        .purple{
+            text-align: center;
+            background-color: purple;
+            width: 70px;
+            height: 70px;
+            padding: auto;
+            margin-left: 190px;
+        }
+        #display{
+            width: 300px;
+            height: 100px;
+            background-color: rgb(236, 235, 235);
+            margin-left: 90px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+            text-align: center;
+        }
+        .Enter{
+            color: white;
+            background-color: black;
+            clear: both;
+            width: 300px;
+            height: 60px;
+            font-size: 40px;
+            margin-left: 90px;
+        }
+        #score{
+            text-align: center;
+            width: 500px;
+            height: 20px;
+            margin-left: -10px;
+            font-size: 27px;
+        }
+        #zero{
+            font-size: 30px;
+            color: white;
+        }
+        .val{
+            font-size: 30px;
+            margin-top: 0px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="mains">
+            <div id="values">
+                <div id="min">5</div>
+                <p class="val">MIN</p>
+                <div id="max">10</div>
+                <p class="val">MAX</p>
+            </div>
+            <p id="score">Score</p>
+            <p id="display">#</p>
+            <div id="number">
+                <button onclick="add(1)" class="green">1</button>
+                <button onclick="add(2)" class="orange">2</button>
+                <button onclick="add(3)" class="green">3</button>
+                <button onclick="add(4)" class="orange">4</button>
+                <button onclick="add(5)" class="orange">5</button>
+                <button onclick="add(6)" class="orange">6</button>
+                <button onclick="add(7)" class="green">7</button>
+                <button onclick="add(8)" class="orange">8</button>
+                <button onclick="add(9)" class="green">9</button>
+            </div>
+            <div>
+                <button id="zero" onclick="add(0)" class="purple">0</button>
+                <div></div>
+                <button onclick="Enter()" class="Enter">Enter</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        var total="";
+        var min =5;
+        var max=10;
+            function add(i){
+                var num = i;
+                // var total=null;
+                total=total+ num.toString() ;
+                display(total);
+            }
+            function display(x){
+
+                var num = Number(x);
+                if(num==0 || num == "0"){
+                    document.getElementById("display").textContent= ""
+                }else {
+                document.getElementById("display").textContent= num;
+            }
+            }
+            function Enter(){
+                if(Number(total)>max){
+                    document.getElementById("max").textContent=total;
+                    max=total;
+                    total="";
+                    display(total);
+                }else if(Number(total)<min){
+                    document.getElementById("min").textContent=total;
+                    min=total;
+                    total="";
+                    display(total);
+                }else{
+                    total="";
+                    display(total)
+                }
+            }
+    </script>
+</html>

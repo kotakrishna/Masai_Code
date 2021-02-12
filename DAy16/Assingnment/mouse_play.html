@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                background-color: rgb(38, 171, 248);
+                width: 700px;
+                height: 400px;
+                margin: auto;
+                border-radius: 5px;
+            }
+            #btn{
+                margin-top: 330px;
+                margin-left: 480px;
+                background-color: greenyellow;
+                height: 50px;
+                width: 200px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <button id="btn">SUBMIT</button>
+        </div>
+    </body>
+    <script>
+        var btn=document.getElementById("btn")
+        var cont=document.getElementById("container")
+        function mousein(){
+            btn.style.backgroundColor="brown"
+        }
+        function mouseout(){
+            btn.style.backgroundColor="greenyellow"
+        }
+        if(cont.onmouseenter){
+            console.log("hello")
+        }
+        cont.onmouseenter=mousein;
+        cont.onmouseleave=mouseout;
+    </script>
+</html>

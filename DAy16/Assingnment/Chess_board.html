@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <style>
+        .main{
+            margin: auto;
+            
+            display: grid;
+            grid-template-columns: repeat(8,100px);
+            grid-template-rows: repeat(8,100px);
+        }
+        .black{
+            background-color: black;
+            color: white;
+        }
+        .white{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button>Create a Chess Board</button>
+</body>
+<script>
+
+    var body=document.querySelector("body")
+    
+    function generateCode(){
+        var main=document.createElement("div")
+        main.setAttribute("class","main")
+        body.appendChild(main)
+        for(var i=0;i<8;i++){
+            for(var j=0;j<8;j++){
+            var div=document.createElement("div")
+            div.textContent= (i*8) + j+1
+            if(i%2==0){
+                if(j%2==0){
+                    div.setAttribute("class","black")
+                }else{
+                    div.setAttribute("class","white")
+                }
+            }else{
+                if(j%2!=0){
+                    div.setAttribute("class","black")
+                }else{
+                    div.setAttribute("class","white")
+                }
+            }
+            main.appendChild(div)
+            
+            div.addEventListener("click",function highlight(){
+                var div=main.querySelectorAll("div")
+                div.forEach(function(el){
+                    el.style.backgroundColor=""
+                })
+                event.target.style.backgroundColor="red"
+            })
+            }
+        }
+        var del=document.createElement("button")
+        del.addEventListener("click",dele);
+        del.textContent="delete"
+        main.appendChild(del);
+        event.target.remove()
+        
+    }
+    function dele(el){
+        var crtbtn=document.createElement("button")
+        crtbtn.textContent="Click for Chess Board"
+        crtbtn.addEventListener("click",generateCode)
+        body.appendChild(crtbtn)
+        var target=event.target
+        target.parentNode.remove()
+    }
+
+   
+   
+    var btn=document.querySelector("button")
+    btn.addEventListener("click",generateCode)
+    
+
+</script>
+</html>
